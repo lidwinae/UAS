@@ -1,0 +1,211 @@
+Prediksi Soal PG
+
+Karakteristik data warehouse menurut Inmon adalah...
+A. Atomic, current, volatile, application-oriented
+B. Subject-oriented, integrated, time-variant, non-volatile
+C. Transaction-oriented, normalized, current, volatile
+D. Real-time, distributed, temporary, operational
+Jawaban: B
+
+Perbedaan utama OLTP dan OLAP adalah...
+A. OLTP untuk analisis, OLAP untuk transaksi
+B. OLTP fokus transaksi harian, OLAP fokus analisis
+C. OLTP selalu historis, OLAP selalu current
+D. OLTP tidak memakai database
+Jawaban: B
+
+Data warehouse bersifat subject-oriented artinya...
+A. Data disusun berdasarkan aplikasi
+B. Data disusun berdasarkan subjek bisnis
+C. Data hanya menyimpan transaksi terbaru
+D. Data selalu dinormalisasi penuh
+Jawaban: B
+
+Data mart yang sumber datanya berasal dari data warehouse pusat disebut...
+A. Independent data mart
+B. Dependent data mart
+C. Operational mart
+D. Temporary mart
+Jawaban: B
+
+Pendekatan Kimball dikenal sebagai...
+A. Top-down dengan enterprise data model
+B. Bottom-up dengan dimensional modeling
+C. Query-driven approach
+D. Pure ER modeling
+Jawaban: B
+
+Kunci keberhasilan integrasi pada Kimball adalah...
+A. Natural key
+B. Conformed dimension
+C. Snowflake mandatory
+D. Operational table
+Jawaban: B
+
+Langkah pertama dalam desain Kimball adalah...
+A. Choose dimensions
+B. Identify facts
+C. Select business process
+D. Create indexes
+Jawaban: C
+
+Grain dalam fact table menunjukkan...
+A. Jumlah dimension table
+B. Tingkat detail satu baris fact table
+C. Ukuran tablespace
+D. Jumlah user BI
+Jawaban: B
+
+Measure yang dapat dijumlahkan pada semua dimensi disebut...
+A. Additive measure
+B. Semi-additive measure
+C. Non-additive measure
+D. Derived attribute
+Jawaban: A
+
+Contoh semi-additive measure adalah...
+A. Revenue
+B. Units sold
+C. Inventory level
+D. Product name
+Jawaban: C
+
+Percentage dan ratio termasuk...
+A. Additive measure
+B. Semi-additive measure
+C. Non-additive measure
+D. Factless measure
+Jawaban: C
+
+Skema dengan satu fact table di tengah dan dimension table tidak dinormalisasi disebut...
+A. Snowflake schema
+B. Star schema
+C. Fact constellation
+D. ER schema
+Jawaban: B
+
+Snowflake schema berbeda dari star schema karena...
+A. Fact table dihapus
+B. Dimension table dinormalisasi
+C. Tidak memiliki primary key
+D. Tidak memiliki measure
+Jawaban: B
+
+Fact constellation schema memiliki ciri...
+A. Satu fact table saja
+B. Banyak fact table yang dapat berbagi dimension
+C. Tidak memiliki dimension
+D. Hanya untuk OLTP
+Jawaban: B
+
+Factless fact table adalah...
+A. Fact table tanpa foreign key
+B. Fact table tanpa measure
+C. Dimension table tanpa atribut
+D. Tabel staging sementara
+Jawaban: B
+
+Surrogate key digunakan dalam DW karena...
+A. Selalu berupa string panjang
+B. Menggantikan natural key dan mengisolasi perubahan dari OLTP
+C. Hanya dipakai di OLTP
+D. Tidak boleh menjadi primary key
+Jawaban: B
+
+SCD Type 1 berarti...
+A. Menambah row baru untuk histori
+B. Menambah kolom current dan previous
+C. Overwrite data lama tanpa menyimpan histori
+D. Membuat fact table baru
+Jawaban: C
+
+SCD Type 2 cocok digunakan ketika...
+A. Histori perubahan harus disimpan lengkap
+B. Histori tidak penting
+C. Hanya perlu current value
+D. Dimension tidak pernah berubah
+Jawaban: A
+
+Dalam ETL, urutan umum load yang benar adalah...
+A. Fact dulu, dimension belakangan
+B. Dimension dulu, fact belakangan
+C. Index dulu, source belakangan
+D. Report dulu, staging belakangan
+Jawaban: B
+
+Komponen Talend yang umum digunakan untuk mapping dan transformasi field adalah...
+A. tMap
+B. tLogRow
+C. tMysqlOutput saja
+D. tFileInput saja
+Jawaban: A
+
+Komponen untuk generate baris data seperti dimensi waktu adalah...
+A. tMap
+B. tRowGenerator
+C. tMysqlInput
+D. tJoinOnly
+Jawaban: B
+
+SQL OLAP RANK() berbeda dari DENSE_RANK() karena...
+A. RANK() tidak bisa memakai ORDER BY
+B. RANK() dapat menghasilkan gap ranking
+C. DENSE_RANK() hanya untuk text
+D. Keduanya selalu menghasilkan hasil sama
+Jawaban: B
+
+Fungsi SQL OLAP untuk memberi nomor unik tiap baris adalah...
+A. RANK
+B. DENSE_RANK
+C. ROW_NUMBER
+D. GROUPING
+Jawaban: C
+
+Klausa PARTITION BY pada window function digunakan untuk...
+A. Menghapus data duplikat
+B. Membagi data ke kelompok perhitungan
+C. Membuat table partition fisik selalu
+D. Mengurutkan hasil akhir saja
+Jawaban: B
+
+Query berikut menghasilkan subtotal bertingkat dan grand total:
+A. GROUP BY ROLLUP(country, region)
+B. GROUP BY country WHERE region
+C. ORDER BY ROLLUP(country)
+D. SELECT ROLLUP FROM country
+Jawaban: A
+
+CUBE(country, region) menghasilkan...
+A. Hanya detail country-region
+B. Detail, subtotal country, subtotal region, dan grand total
+C. Hanya grand total
+D. Hanya subtotal country
+Jawaban: B
+
+GROUPING() berguna untuk...
+A. Mengganti SUM()
+B. Membedakan NULL asli dan NULL hasil agregasi grouping
+C. Membuat ranking
+D. Menghapus duplicate row
+Jawaban: B
+
+Jika ingin mengambil Top 5 berdasarkan hasil RANK(), pendekatan yang benar adalah...
+A. Filter alias rank langsung di WHERE query yang sama
+B. Gunakan subquery/CTE lalu filter ranking di query luar
+C. Gunakan GROUP BY rank saja
+D. Tidak bisa dilakukan di SQL
+Jawaban: B
+
+Dalam DB2 physical design, buffer pool berhubungan dengan...
+A. Area memori untuk halaman data
+B. Tabel fakta tanpa measure
+C. Diagram star schema
+D. Report dashboard
+Jawaban: A
+
+Urutan physical object DB2 yang paling masuk akal adalah...
+A. Table -> tablespace -> buffer pool
+B. Buffer pool -> tablespace -> table
+C. Report -> table -> buffer pool
+D. Fact -> source -> staging
+Jawaban: B
